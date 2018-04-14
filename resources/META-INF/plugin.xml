@@ -1,0 +1,40 @@
+<idea-plugin>
+  <id>handlebars.context.builder</id>
+  <name>HandleBars Context Builder</name>
+  <version>1.0</version>
+  <vendor email="danielglickman66@gmail.com">daniel glickman</vendor>
+
+  <description><![CDATA[
+      build java context class with getters and setters from handlebar template
+
+    ]]></description>
+
+  <change-notes><![CDATA[
+
+    ]]>
+  </change-notes>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+  <idea-version since-build="173.0"/>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+       on how to target different products -->
+  <!-- uncomment to enable plugin in all products
+  <depends>com.intellij.modules.lang</depends>
+  -->
+
+  <extensions defaultExtensionNs="com.intellij">
+    <!-- Add your extensions here -->
+  </extensions>
+
+  <actions>
+    <action class="actions.GenerateAction" description="create handlebars context" id="generateContext" text="create handlebars context">
+      <add-to-group anchor="first" group-id="GenerateGroup"/>
+    </action>
+    <action class="actions.FunctionalGenerateAction" description="create handlebars context that get functions in setters" id="generateFunctionalContext"
+      text="create handlebars context that get functions in setters">
+      <add-to-group anchor="after" group-id="GenerateGroup"/>
+    </action>
+  </actions>
+
+</idea-plugin>
